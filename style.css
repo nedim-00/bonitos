@@ -1,0 +1,639 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap");
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.background{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/Restaurant.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.background .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+}
+
+.background .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.background .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.background .wave.wave3{
+    animation: animate2 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+.background .wave.wave4{
+    animation: animate2 15s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+    border-bottom: 1px solid #fff;
+    z-index: 1001;
+}
+
+.nav .logo{
+    margin-top: 12px;
+    margin-left: 20px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; 
+}
+
+.nav ul{
+    float: right;
+    margin-top: 25px;
+}
+
+.nav li{
+    display: inline-block;
+    margin: 0 20px; 
+}
+
+.nav ul li a{
+    color: #fff;
+    padding: 12px 30px; 
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav ul li .current{
+    color: black ;
+    font-size: 16px;
+    background: #ABF62D !important;
+    border-radius: 50px;    
+}
+
+.nav ul li a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+}
+
+.nav #icon{
+    line-height: 80px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px;
+}
+
+.title{
+    margin-top: 13em;
+    margin-left: 5em;
+    width: 40em;
+    text-align: center;
+}
+
+.title h1{
+    color: white;
+    font-size: 4em;
+    
+}
+
+.title .subhead{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .3em;
+    margin-top: 2em;
+    font-size: 1.2em;
+}
+
+.order-button{
+    background: #ABF62D;
+    color: black;
+    text-decoration: none;
+    padding: .6em 1.3em;
+    font-size: 1.4em;
+    border-radius: 5em;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1em;
+    transition: .2s ease-in-out 0s;
+}
+
+.order-button:hover{
+    transform: scale(1.1);
+}
+
+.reserve{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 2em;
+    margin-top: 4em;
+    background: url(img/op.jpg);
+    background-attachment: fixed;
+    height: 200px;
+    align-content: center;
+}
+
+.right-space{
+    margin-right: 3em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.reserve .text{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    color: white;
+}
+
+.reserve label{
+    margin-bottom: 0.3em;
+}
+
+.reserve .location{
+    display: flex;
+    flex-direction: column;
+}
+
+.reserve .arrival{
+    display: flex;
+    flex-direction: column;
+}
+
+.reserve .people{
+    display: flex;
+    flex-direction: column;
+}
+
+.reserve .name{
+    display: flex;
+    flex-direction: column;
+}
+
+.reserve input{
+    height: 3em;
+    text-align: center;
+    width: 170px;
+}
+
+.reserve select{
+    height: 3em;
+    width: 10em;
+    text-align: center;
+}
+
+.reserve input:focus {
+    outline: none !important;
+    border:1px solid #ABF62D;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.reserve select:focus {
+    outline: none !important;
+    border:1px solid #ABF62D;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.reserve #day{
+    width: 4em;
+}
+
+.reserve #month{
+    width: 4em;
+}
+
+.reserve #year{
+    width: 6em;
+}
+
+.reserve button{
+    height: 2.4em;
+    width: 8em;
+    align-self: flex-end;
+    border: none;
+    background-color: #ABF62D;
+    color: black;
+    font-size: 1.1em;
+}
+
+.reserve button:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+}
+
+.about{
+    text-align: center;
+    font-size: 3em;
+}
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about .about-content .image{
+    margin-right: 2em;
+}
+
+.about .about-content .image img{
+    border-radius: 0.5em;
+}
+
+.about .about-content .text{
+    width: 560px;
+    text-align: left;
+}
+
+.about h2{
+    padding-top: 0.7em;
+    margin-bottom: 1em;
+    color: black;
+}
+
+.about h3{
+    font-size: 0.8em;
+}
+
+.about p{
+    font-size: 0.4em;
+    text-align: left;
+    width: 525px;
+    text-align: justify;
+    margin-bottom: 2em;
+}
+
+.about .img2{
+    width: 525px;
+    border-radius: 0.5em;
+}
+
+.about a{
+    color: #ABF62D ;
+    text-decoration-color: #ABF62D ;
+}
+
+.contact .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact{
+    margin-bottom: 5.5em;
+}
+
+.contact .left-side{
+    margin-right: 4em;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 1em;
+    width: 600px;
+}
+.contact .left-side p{
+    margin-left: 3.3em;
+    color: white;
+}
+
+.contact .left-side .map{
+    text-align: center;
+}
+
+.contact .left-side span{
+    color: rgb(230, 45, 45);
+    font-weight: bold;
+}
+.contact .left-side iframe{
+    margin-top: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.contact .right-side{
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 1em;
+    width: 300px;
+    text-align: center;
+}
+
+.bottom{
+    margin-bottom: 1.5em;
+}
+
+.contact .right-side input{
+    margin-top: 2em;
+    width: 200px;
+    height: 50px;
+    padding-left: 1em;
+    border: none;
+}
+
+.contact .right-side textarea{
+    margin-top: 2em;
+    width: 200px;
+    height: 150px;
+    padding-left: 1em;
+    border: none;
+    padding-top: 1em;
+    resize: none;
+}
+
+.contact .right-side button{
+    width: 100px;
+    height: 40px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #ABF62D;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3px;
+    border: none;
+    border-radius: 1em;
+}
+
+.contact .right-side button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.contact h2{
+    text-align: center;
+    font-size: 4em;
+    margin-top: 0.9em;
+    margin-bottom: 0.5em;
+}
+
+.footer{
+    background-color: black;
+    height: 4em;
+    text-align: center;
+}
+
+.footer p{
+    color: white;
+    line-height: 4em;
+}
+
+.about .images{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.about .images .elements{
+    width: 1200px;
+}
+
+.images img{
+    height: 300px;
+    filter: opacity(50%);
+    border-radius: 0.1em;
+}
+
+.images img:hover{
+    filter: opacity(100%);
+    transition-delay: 0.05s;
+}
+
+#reserve{
+    height: 6px;
+}
+
+.mob-map{
+    display: none;
+}
+
+
+@media (max-width: 1080px){
+
+    .nav #icon{
+        display: block;
+    }
+
+    .nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #0000008a;
+        top: 45px;
+        left:0;
+        text-align: center;
+        left: -100%;
+        transition: all .5s;
+        
+        z-index: 1;
+        
+    }
+    .nav ul li {
+        margin-top: 80px;
+    }
+
+    .background .wave.show{
+        z-index: -1;
+    }
+
+    
+    .nav li{
+        display: block;
+    }
+
+    .nav ul.show{
+        left: 0;
+    }
+
+    .title{
+        margin-top: 6em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width: auto;
+        justify-content: left;
+    }
+
+    .title h1{
+        font-size: 2.8em;
+    }
+
+    .title .subhead{
+        font-size: 1.1em;
+    }
+    .background .wave{
+        height: 70px;
+        background-size: 1000px 70px;
+    }
+    .reserve{
+        justify-content: left;
+    }
+
+    .reserve .text{
+        flex-direction: row;
+    }
+
+    .reserve span{
+        margin-right: 0.3em;
+    }
+
+    .reserve h2{
+        width: 100%;
+    }
+
+    .about .about-content{
+       margin-left: 0.7em;
+       margin-right: 0.7em;
+    }
+
+    .text h3{
+        width: auto;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .text p{
+        width: auto;
+        text-align: left;
+        font-size: 16px;
+    }
+    .about .image img{
+        height: 350px;
+        object-fit: fill;
+    }
+
+    .about-content .image{
+        margin-bottom: 1.5em;
+    }
+
+    .about .about-content .image{
+        margin-right: 0;
+    }
+
+    .img2{
+        display: none;
+    }
+
+    .map{
+        display: none;
+    }
+
+    .images img{
+        height: 150px;
+        filter: opacity(50%);
+    }
+
+    .mob-view{
+        display: none;
+    }
+
+    .about{
+        font-size: 2em;
+    }
+
+    .reserve{
+        height: 600px;
+    }
+
+    .location{
+        width: 100%;
+    }
+    
+    .arrival{
+        width: 100%;
+    }
+    
+    .people{
+        width: 100%;
+    }
+    
+    .name{
+        width: 100%;
+    }
+
+    .reserve span{
+        margin-bottom: 1em;
+    }
+
+    .contact{
+        font-size: 0.8em;
+    }
+
+    .contact .left-side{
+        margin-right: 1em;
+        width: 300px;
+        margin-bottom: 2em;
+    }
+
+    .mob-map{
+        display: block;
+        text-align: center;
+    }
+
+    .contact .right-side{
+        padding-top: 1em;
+        margin-right: 1em;
+    }
+}

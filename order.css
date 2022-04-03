@@ -1,0 +1,245 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header{
+    background: rgb(2,0,36);
+    clip-path: polygon(0% 0%, 0% 100%, 30% 100%, 20% 0, 30% 0, 40% 100%, 60% 100%, 70% 0, 80% 0, 70% 100%, 100% 100%, 100% 0%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,96,121,1) 35%, rgba(9,94,121,1) 65%, rgba(2,0,36,1) 100%);
+    color: white;
+    text-align: center;
+    height: 85px;
+    letter-spacing: 20px;
+    vertical-align: middle;
+}
+
+.order{
+    display: flex;
+}
+
+.menu{
+    width: 72%;
+}
+.header h1{
+    display: inline-block;
+}
+
+h3 {
+    background-color: black;
+    color: white;
+    width: 100px;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 0;
+    vertical-align: middle;
+
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    
+}
+
+.drinksname{
+    width: 125px ;
+    background-color: rgb(9, 8, 58);
+}
+
+.add{
+    margin-top: 1em;
+    text-align: center;  
+}
+
+.items-quantity{
+    display: flex;
+    align-content: center;
+}
+
+.items{
+    min-height: 50px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.total-price{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.items-quantity button{
+    background-color: rgb(9, 8, 58);
+    border: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.item{
+    height: 320px;
+    background-color: black;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 2em;
+    color: white;
+    margin-left: 2em;
+    margin-top: 2em;
+    transition: all .2s ease-in-out;
+}
+
+.item:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.item-name{
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.item img{
+    max-height: 200px;
+    object-fit: fill;
+    border-radius: 2em;
+    
+}
+.description{
+    font-weight: 600;
+    margin-left: 1em;
+}
+
+.price{
+    text-transform: uppercase;
+}
+
+.quantity{
+    text-transform: uppercase;
+}
+.quantity input{
+    margin-left: 0.5em;
+    width: 3em;
+    height: 1.5rem;
+    border: none;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.food{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.info .order-info{
+    margin-top: 5em;
+    min-height: 400;
+    max-height: auto;
+    background-color: rgb(9, 8, 58);
+    width: 22%;
+    position: fixed;
+    border-radius: 1em;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 2em;
+    
+}
+
+.details{
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: white 2px solid;
+}
+
+.payment{
+    border-top: white 2px solid;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.payment .paymentInfo{
+    width: 80%;
+    border: none;
+    height: 2.5em;
+    padding: 1em;
+    margin-bottom: 0.5em;
+}
+.payment label{
+    color: white;
+}
+#orderBtn{
+    border: none;
+    height: 2em;
+    width: 5em;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#orderBtn:hover{
+    background-color: rgb(9, 8, 58);
+    color:white;
+    outline: white 1px solid;
+    cursor: pointer;
+}
+
+.paymentChoice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+
+.radioInput{
+    
+    margin-right: 2em;
+}
+
+
+.drinks{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+
+.item-color{
+    background-color: rgb(9, 8, 58);
+}
+
+.additem{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    
+}
+
+.listitem{
+    display: flex;
+    text-align: center;
+}
+
+.items-quantity{
+    width: 25%;
+}
+
+.items-name{
+    width: 50%;
+}
+
+.items-price{
+    width: 25%;
+}
+
+.removeBtn{
+    color: red;
+    font-size: 20px;
+}
